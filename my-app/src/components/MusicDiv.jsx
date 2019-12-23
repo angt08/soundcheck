@@ -1,27 +1,41 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import audioOne from '../audioOne.mp3';
+
 
 export default class MusicDiv extends Component {
+  constructor() {
+    super();
+  }
   render() {
+    let aOne = new Audio(audioOne);
+
     return (
       <div id="main-div">
 
-        <button>
-      Boop
+        <button onClick={async () =>
+        await aOne.play()}>
+      aOne
         </button>
-        <button>
-      Boop
+
+        <button onClick={async () =>
+        await aOne.play()}>
+      aTwo
         </button>
+
         <button>
-      Boop
+     aThree
         </button>
+
         <button>
-      Boop
+      aFour
         </button>
+
         <button>
-      Boop
+      aFive
         </button>
+
         <button>
-      Boop
+      aSix
         </button>
 
 
